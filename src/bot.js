@@ -6,7 +6,7 @@ const { Telegraf, Input } = require("telegraf");
 const bot = new Telegraf(process.env.TELEGRAM_TOKEN);
 
 const main = async () => {
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({ headless: "new" });
   const [tab] = await browser.pages();
 
   bot.start((ctx) => {
