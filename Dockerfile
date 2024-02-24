@@ -5,7 +5,7 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD \
 WORKDIR /usr/src/app
 
 COPY pnpm*.yaml ./
-RUN pnpm ci
+RUN pnpm install 
 
 COPY . .
-CMD ["node", "src/bot.js"]
+CMD ["pnpm", "start"]
