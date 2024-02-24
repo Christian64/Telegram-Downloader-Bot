@@ -5,7 +5,7 @@
   "main": "src/bot.js",
   "scripts": {
     "dev": "nodemon src/bot.js",
-    "start": "node src/bot.js"
+    "start": "node src/bot.js NODE_ENV=production"
   },
   "keywords": [],
   "author": "",
