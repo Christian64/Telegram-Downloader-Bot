@@ -4,7 +4,7 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD \
 
 WORKDIR /usr/src/app
 
-COPY pnpm*.yaml
+COPY pnpm*.yaml ./
 RUN pnpm ci
 
 COPY . .
