@@ -6,7 +6,8 @@ const { Telegraf, Input } = require("telegraf");
 const bot = new Telegraf(process.env.TELEGRAM_TOKEN);
 
 const main = async () => {
-  const browser = await puppeteer.launch({
+  const browser =
+    await puppeteer.launch(/* {
     headless: "new",
     args: [
       "--disable-setuid-sandbox",
@@ -18,7 +19,7 @@ const main = async () => {
       process.env.NODE_ENV === "production"
         ? process.env.PUPPETEER_EXECUTABLE_PATH
         : puppeteer.executablePath(),
-  });
+  } */);
 
   const [tab] = await browser.pages();
 
