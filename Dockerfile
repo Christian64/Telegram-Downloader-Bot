@@ -4,8 +4,8 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD \
 
 WORKDIR /usr/src/app
 
-COPY pnpm*.yaml ./
-RUN pnpm install 
+COPY package*.json ./
+RUN npm install 
 
-COPY . .
-CMD ["pnpm", "start"]
+COPY . /.
+CMD ["npm", "start"]
